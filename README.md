@@ -1,2 +1,2 @@
 # Tic-Tac-Toe-Web-Application
-Missing impossible mode.
+Tic Tac Toe Game Web Application. Game has easy and hard modes, an impossible mode will be added soon.
