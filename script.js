@@ -167,6 +167,6 @@ function declareWinner(){
         if(checkWinner(userValue)){
             resetButton.textContent = "You win!";;
         } else if(checkWinner(computerValue))
-        {resetButton.textContent = "You loose!";}
+        {resetButton.textContent = "You lose!";}
     }
 }
