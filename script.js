@@ -42,7 +42,7 @@ function restartGame(){
     }
 }
 function click(square) {  
-    if (playBoard[square.target.id]==0) {
+    if ((playBoard[square.target.id]==0)&&(!checkWin()&&!checkTie())) {
         implement(square.target.id, user, userValue);        
     }
     if(!checkWin()&&!checkTie()){
