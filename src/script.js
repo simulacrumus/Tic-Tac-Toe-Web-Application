@@ -46,7 +46,7 @@ function click(square) {
         implement(square.target.id, user, userValue);        
     }
     if(!checkWin()&&!checkTie()){
-        implement(difficulty(), computer, computerValue);
+        setTimeout(implement, 750,difficulty(), computer, computerValue);
     }
 }
 function implement(squareId, player, playerno) {
