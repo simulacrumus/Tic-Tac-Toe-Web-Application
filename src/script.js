@@ -2,6 +2,7 @@ const user = 'X';
 const computer = 'O';
 const userValue = 1;
 const computerValue = -1;
+var counter = 0;
 var easyButton = document.getElementById("easyButton");
 var hardButton = document.getElementById("hardButton");
 var impossibleButton = document.getElementById("impossibleButton");
@@ -43,10 +44,12 @@ function restartGame(){
 }
 function click(square) {  
     if ((playBoard[square.target.id]==0)&&(!checkWin()&&!checkTie())) {
-        implement(square.target.id, user, userValue);        
+        implement(square.target.id, user, userValue);
+	counter++;
     }
-    if(!checkWin()&&!checkTie()){
+    if(!checkWin()&&!checkTie()&&counter%2==1){
         setTimeout(implement, 750,difficulty(), computer, computerValue);
+	counter++;
     }
 }
 function implement(squareId, player, playerno) {
