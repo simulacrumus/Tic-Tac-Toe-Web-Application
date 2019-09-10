@@ -21,21 +21,20 @@ easyButton.classList.add("selectedButton");
 easyButton.addEventListener("click", function(){
     easyButton.classList.add("selectedButton");
     hardButton.classList.remove("selectedButton");
-    easyMode=true;
-    hardMode=false;
     restartGame();
 })
 
 hardButton.addEventListener("click", function(){
     hardButton.classList.add("selectedButton");
     easyButton.classList.remove("selectedButton");
-    easyMode=false;
-    hardMode=true;
     restartGame();
 })
 
 function restartGame(){
+    easyMode=false;
+    hardMode=true;
     clearBoards();
+    counter=0;
     for (var i = 0; i < boxes.length; i++) {
     boxes[i].innerText = '';
     boxes[i].addEventListener('click', click);
